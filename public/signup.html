@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
@@ -158,7 +158,9 @@
     </div>
     <div class="slide-shadow"></div>
     <!--body-->
-    <div class="z-1 flex h-screen w-full flex-col items-center justify-center">
+    <div
+      class="z-1 mt-6 mb-6 flex h-fit w-full flex-col items-center justify-center"
+    >
       <!--title-fieldset-container-->
       <div
         class="flex h-fit w-fit flex-col items-center justify-center gap-12 p-0"
@@ -172,7 +174,7 @@
         </div>
         <!--form-->
         <form
-          class="flex h-fit w-full flex-col items-start gap-16 rounded-2xl py-12 px-16 shadow-lg shadow-black/50 backdrop-blur-sm"
+          class="flex h-fit w-fit flex-col items-start gap-16 rounded-2xl py-12 px-16 shadow-lg shadow-black/50 backdrop-blur-sm"
           id="login-form"
           style="
             background: linear-gradient(
@@ -192,7 +194,7 @@
               ></span>
               <div class="h-4 w-0.5 rounded-full bg-white"></div>
             </div>
-            <label class="text-3xl font-bold text-white">Login</label>
+            <label class="text-3xl font-bold text-white">Signup</label>
             <div class="flex h-fit w-full flex-row items-center gap-0">
               <div class="h-4 w-0.5 rounded-full bg-white"></div>
               <span
@@ -202,8 +204,35 @@
           </div>
           <!--fieldset-inputs-->
           <div class="flex flex-col items-start gap-14 p-0">
-            <!--input-texts-flex-->
+            <!--input-texts-radio-flex-->
             <div class="flex flex-col items-start gap-12">
+              <!--input-name-flex-->
+              <div class="flex w-fit flex-row items-start gap-12">
+                <div class="input-container">
+                  <input
+                    required=""
+                    class="input-field"
+                    type="text"
+                    id="first-name"
+                    placeholder="blank"
+                    maxlength="10"
+                  />
+                  <label for="first-name" class="input-label">First Name</label>
+                  <span class="input-highlight"></span>
+                </div>
+                <div class="input-container">
+                  <input
+                    required=""
+                    class="input-field"
+                    type="text"
+                    id="last-name"
+                    placeholder="blank"
+                    maxlength="10"
+                  />
+                  <label for="first-name" class="input-label">First Name</label>
+                  <span class="input-highlight"></span>
+                </div>
+              </div>
               <!--input-email-->
               <div class="input-container">
                 <input
@@ -216,42 +245,88 @@
                 <label for="email" class="input-label">Email</label>
                 <span class="input-highlight"></span>
               </div>
-              <!--input-password-flex-->
-              <div class="flex flex-col items-end gap-4">
-                <!--input-password-->
-                <div class="input-container">
-                  <input
-                    required=""
-                    class="input-field"
-                    type="password"
-                    id="password"
-                    placeholder="blank"
-                  />
-                  <label for="password" class="input-label">Password</label>
-                  <span class="input-highlight"></span>
+              <!--input-password-->
+              <div class="input-container">
+                <input
+                  required=""
+                  class="input-field"
+                  type="password"
+                  id="password"
+                  placeholder="blank"
+                />
+                <label for="password" class="input-label">Password</label>
+                <span class="input-highlight"></span>
+              </div>
+              <!--radio-gender-->
+              <div class="flex flex-col items-start gap-2">
+                <label class="text-zinc-300">Gender</label>
+                <!--radio-group-->
+                <div class="flex gap-6 pl-2">
+                  <!--radio-options-->
+                  <label class="form-options">
+                    <input
+                      class="form-radio"
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                      required
+                    />
+                    <label class="radio-label" for="male">Male</label>
+                  </label>
+                  <label class="form-options">
+                    <input
+                      class="form-radio"
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                      required
+                    />
+                    <label class="radio-label" for="female">Female</label>
+                  </label>
+                  <label class="form-options">
+                    <input
+                      class="form-radio"
+                      type="radio"
+                      id="others"
+                      name="gender"
+                      value="others"
+                      required
+                    />
+                    <label class="radio-label" for="others">Others</label>
+                  </label>
                 </div>
-                <!--forgot-password-->
-                <label
-                  class="cursor-pointer text-xs text-zinc-400 duration-300 hover:text-white hover:ease-in-out"
-                  >Forgot pasword?</label
-                >
               </div>
             </div>
-            <!--submit-sign-up-->
+            <!--terms-submit-signup-->
             <div class="flex h-fit w-full flex-col items-center gap-4">
+              <label class="flex w-full flex-row items-center gap-2">
+                <input class="form-checkbox" type="checkbox" id="check-terms" required />
+                <span class="text-xs text-zinc-300"
+                  >I agree to
+                  <a
+                    href="terms.html"
+                    class="hover:text-shadow-lg text-xs text-teal-400 underline decoration-solid decoration-1 underline-offset-2 shadow-white drop-shadow-md duration-300 hover:text-white hover:ease-in-out"
+                    >the terms and conditions.</a
+                  ></span
+                >
+              </label>
               <!--button-->
               <button type="submit" id="submit">
-                <span>CONNECT</span>
+                <span>GET STARTED</span>
               </button>
-              <!--sign-up-labels-->
+              <!--log-in-labels-->
               <div class="flex flex-row items-start gap-1">
                 <!--label-->
-                <label class="text-xs text-zinc-300">Don't have account?</label>
+                <label class="text-xs text-zinc-300"
+                  >Already have an account?</label
+                >
                 <!--anchor-->
                 <a
-                  href="signup.html"
+                  href="login.html"
                   class="hover:text-shadow-lg text-xs text-teal-400 underline decoration-solid decoration-1 underline-offset-2 shadow-white drop-shadow-md duration-300 hover:text-white hover:ease-in-out"
-                  >Sign up here</a
+                  >Log in here</a
                 >
               </div>
             </div>
@@ -264,7 +339,7 @@
           © 2023 @dit_aspd. <br /><a
             rel="license"
             href="https://creativecommons.org/licenses/by/4.0/"
-            class="duration-300 hover:text-teal-400 hover:ease-in-out"
+            class="duration hover:text-teal-400 hover:ease-in-out"
             >CC BY 4.0 International License.</a
           ></label
         >

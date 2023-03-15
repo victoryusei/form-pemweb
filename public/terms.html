@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Terms & Conditions</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
@@ -12,7 +12,6 @@
     />
     <link rel="icon" type="image/svg+xml" href="../src/svg/icon.svg" />
   </head>
-
   <body class="bg-gray-900">
     <div class="slideshow">
       <div class="slides-container-left">
@@ -158,10 +157,12 @@
     </div>
     <div class="slide-shadow"></div>
     <!--body-->
-    <div class="z-1 flex h-screen w-full flex-col items-center justify-center">
+    <div
+      class="z-1 mt-6 mb-6 flex h-fit w-full flex-col items-center justify-center"
+    >
       <!--title-fieldset-container-->
       <div
-        class="flex h-fit w-fit flex-col items-center justify-center gap-12 p-0"
+        class="flex h-fit max-w-[720px] flex-col items-center justify-center gap-12 p-0"
       >
         <!--title-->
         <div
@@ -170,9 +171,9 @@
           <img src="../src/svg/icon.svg" class="h-14" />
           <img src="../src/svg/outspace.svg" class="h-6" />
         </div>
-        <!--form-->
-        <form
-          class="flex h-fit w-full flex-col items-start gap-16 rounded-2xl py-12 px-16 shadow-lg shadow-black/50 backdrop-blur-sm"
+        <!--container-->
+        <div
+          class="flex h-fit w-fit flex-col items-start gap-16 rounded-2xl py-12 px-16 shadow-lg shadow-black/50 backdrop-blur-sm"
           id="login-form"
           style="
             background: linear-gradient(
@@ -186,77 +187,81 @@
           <div
             class="flex h-fit w-full flex-row items-center justify-center gap-6 p-0"
           >
-            <div class="flex h-fit w-full flex-row items-center gap-0">
+            <div class="flex h-fit w-fit flex-row items-center gap-0">
               <span
-                class="block h-0.5 w-full bg-gradient-to-r from-transparent to-white"
+                class="block h-0.5 w-[96px] bg-gradient-to-r from-transparent to-white"
               ></span>
               <div class="h-4 w-0.5 rounded-full bg-white"></div>
             </div>
-            <label class="text-3xl font-bold text-white">Login</label>
-            <div class="flex h-fit w-full flex-row items-center gap-0">
+            <label
+              class="line-h w-fit text-center text-xl font-bold text-white md:text-3xl"
+              >Terms & Conditions</label
+            >
+            <div class="flex h-fit w-fit flex-row items-center gap-0">
               <div class="h-4 w-0.5 rounded-full bg-white"></div>
               <span
-                class="block h-0.5 w-full bg-gradient-to-r from-white to-transparent"
+                class="block h-0.5 w-[96px] bg-gradient-to-r from-white to-transparent"
               ></span>
             </div>
           </div>
-          <!--fieldset-inputs-->
-          <div class="flex flex-col items-start gap-14 p-0">
-            <!--input-texts-flex-->
-            <div class="flex flex-col items-start gap-12">
-              <!--input-email-->
-              <div class="input-container">
-                <input
-                  required=""
-                  class="input-field"
-                  type="email"
-                  id="email"
-                  placeholder="blank"
-                />
-                <label for="email" class="input-label">Email</label>
-                <span class="input-highlight"></span>
-              </div>
-              <!--input-password-flex-->
-              <div class="flex flex-col items-end gap-4">
-                <!--input-password-->
-                <div class="input-container">
-                  <input
-                    required=""
-                    class="input-field"
-                    type="password"
-                    id="password"
-                    placeholder="blank"
-                  />
-                  <label for="password" class="input-label">Password</label>
-                  <span class="input-highlight"></span>
-                </div>
-                <!--forgot-password-->
-                <label
-                  class="cursor-pointer text-xs text-zinc-400 duration-300 hover:text-white hover:ease-in-out"
-                  >Forgot pasword?</label
-                >
-              </div>
-            </div>
-            <!--submit-sign-up-->
-            <div class="flex h-fit w-full flex-col items-center gap-4">
-              <!--button-->
-              <button type="submit" id="submit">
-                <span>CONNECT</span>
-              </button>
-              <!--sign-up-labels-->
-              <div class="flex flex-row items-start gap-1">
-                <!--label-->
-                <label class="text-xs text-zinc-300">Don't have account?</label>
-                <!--anchor-->
-                <a
-                  href="signup.html"
-                  class="hover:text-shadow-lg text-xs text-teal-400 underline decoration-solid decoration-1 underline-offset-2 shadow-white drop-shadow-md duration-300 hover:text-white hover:ease-in-out"
-                  >Sign up here</a
-                >
-              </div>
-            </div>
+          <!--fieldset-texts-->
+          <div
+            class="w-full flex-col items-start justify-start text-justify gap-[20px] text-zinc-400"
+          >
+            <p class="w-full text-[16px] text-white">
+              Please read these terms and conditions carefully before using our
+              service.
+            </p>
+            <br />
+            <p class="w-full text-justify text-[14px]">
+              By accessing or using the service, you agree to be bound by these
+              terms and conditions. If you disagree with any part of the terms
+              and conditions, you may not access the service.
+            </p>
+            <ol class="indent mt-2 list-decimal pl-[36px] text-[12px]">
+              <li>
+                Our service allows you to access and use certain features of our
+                platform. You must comply with all applicable laws and
+                regulations while using our service.
+              </li>
+              <li>
+                All content included on the platform, such as text, graphics,
+                logos, images, and software, is the property of our company or
+                its content suppliers and protected by United States and
+                international copyright laws.
+              </li>
+              <li>
+                You retain ownership of all content that you submit to the
+                platform. By submitting content, you grant our company a
+                worldwide, non-exclusive, royalty-free license to use, copy,
+                reproduce, distribute, and display your content.
+              </li>
+              <li>
+                The service is provided on an "as is" and "as available" basis.
+                Our company makes no warranties or representations about the
+                accuracy or completeness of the content provided on the
+                platform.
+              </li>
+            </ol>
+            <br />
+            <p class="w-full text-justify text-[14px] text-white">
+              Please note that this is just a sample and it's important to
+              consult with a legal professional to ensure that your terms and
+              conditions comply with all applicable laws and regulations.
+            </p>
           </div>
-        </form>
+          <div class="flex w-full flex-col items-start gap-14 p-0">
+            <!--button-->
+            <a
+              type="submit"
+              id="submit"
+              class="flex h-fit w-full flex-col items-center gap-4"
+              href="signup.html"
+            >
+              <span>UNDERSTOOD</span>
+            </a>
+          </div>
+        </div>
         <label
           class="drop-shadow-white text-center text-xs font-medium text-white text-opacity-100 drop-shadow-2xl"
           id="license"

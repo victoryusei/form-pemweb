@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "serve public/login.html",
     "postcss": "postcss ./src/input.css -o ./public/styles.css --watch",
     "prettier": "npx prettier --write '**/*.html"
   },
